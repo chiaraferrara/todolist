@@ -1,1 +1,12 @@
-<p>todo works!</p>
+<div class="card shadow-lg mt-5">
+    <div class="card-header text center">
+        <h1 class="display-6 fw-bold">To do List</h1>
+    </div>
+    <div class="card-body p-4">
+        <div class="input-group mb-3">
+            <!-- #titleInput Questo meccanismo permette di ottenere un riferimento a un elemento DOM all'interno del tuo template Angular e accedervi direttamente dal componente TypeScript. -->
+            <input type="text" class="form-control" placeholder="Title" #titleInput>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="onClick(titleInput)">+</button>
+          </div>
+    </div>
+</div>
