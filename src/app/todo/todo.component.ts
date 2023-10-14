@@ -17,7 +17,7 @@ export class TodoComponent implements OnInit {
 
   }
 // Ora posso accedere al valore dell'input utilizzando titleValue.
-  onClick(titleInput :HTMLInputElement){
+  onClick(titleInput : HTMLInputElement){
     if(titleInput.value){
     this.todoService.addTodo(titleInput.value)
     titleInput.value = "";

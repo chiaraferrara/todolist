@@ -8,8 +8,9 @@ import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/compat
 
 // sta dichiarando un parametro chiamato firestore di tipo AngularFirestore. 
 export class TodoService {
+  // collection è il database, prende il metodo dal module importato. 
   firestoreCollection : AngularFirestoreCollection;
-
+// metodo all'interno dell'import.
   constructor(private firestore: AngularFirestore) { 
     this.firestoreCollection = firestore.collection('todos');
   }
@@ -18,6 +19,7 @@ export class TodoService {
     // passiamo un oggetto title che salverà la stringa
     this.firestoreCollection.add({
       title,
+      // non è completata (item in to do)
       isDone : false
     })
   }
