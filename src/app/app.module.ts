@@ -6,11 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment.development';
 import { TodoComponent } from './todo/todo.component';
+import { CreditsComponent } from './credits/credits.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent
+    TodoComponent,
+    CreditsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
