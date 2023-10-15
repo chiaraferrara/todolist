@@ -16,7 +16,7 @@ import { TodoComponent } from './todo/todo.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
