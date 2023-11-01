@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Port+Lligat+Slab&display=swap');
 .container-flex{
     display:flex;
     flex-flow: row wrap;
@@ -6,6 +6,27 @@
     align-items: center;
 }
 .card{
-    font-family: 'Martian Mono', monospace;
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Port Lligat Slab', serif;
 }
 
+.list-group, .form-control{
+    font-size: 1.2em;
+}
+
+.card-body{
+    box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.123);
+    border-radius: 0%;
+    border: none
+}
+
+.list-item-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .completed {
+    color: #888; 
+    text-decoration: line-through; 
+  }

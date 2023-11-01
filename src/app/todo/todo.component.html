@@ -1,22 +1,21 @@
 <div class="card mt-5">
-    <div class="card-header text center">
-        <h1 class="display-6 fw-bold">To do List</h1>
+    <div class="card-header text-center">
+        <h1 class="display-6 fw-bold">To Do List</h1>
     </div>
     <div class="card-body">
         <div class="input-group mb-3">
-            <!-- #titleInput Questo meccanismo permette di ottenere un riferimento a un elemento DOM all'interno del tuo template Angular e accedervi direttamente dal componente TypeScript. -->
             <input type="text" class="form-control" placeholder="Title" #titleInput>
             <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="onClick(titleInput)">+</button>
-          </div>
-          <ul class="list-group">
-            <li class="list-group-item"
-            *ngFor="let item of todos">
-        <span class="container-flex py-1">
-            <i class="text-success" (click)="onStatusChange(item.id , !item.isDone)"
-   [ngClass]="item.isDone ? 'fa-solid fa-check' : 'fa-regular fa-circle'"></i>
-            {{item.title}}
-            <button class="btn btn-outline-secondary border-0"  type="button" id="button-addon2" (click)="deleteToDoItem(item.id)">x</button>
-        </span></li>
-          </ul>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of todos; let i = index">
+                <span class="container-flex py-1">
+                    <i class="text-success" (click)="onStatusChange(item.id, !item.isDone)" 
+                       [ngClass]="item.isDone ? 'fa-solid fa-check' : 'fa-regular fa-circle'"></i>
+                       <span [ngClass]="{'completed': item.completed}">{{item.title}}</span>
+                    <button class="btn btn-outline-secondary border-0" type="button" (click)="deleteToDoItem(item.id)">x</button>
+                </span>
+            </li>
+        </ul>
     </div>
 </div>

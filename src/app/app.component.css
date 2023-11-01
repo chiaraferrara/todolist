@@ -1,0 +1,7 @@
+body{
+    min-height: 100vh;
+    overflow: hidden;
+    font: 16px/40px "Open Sans", sans-serif;
+    display: block;
+    background-color: #dfdfdf;
+}

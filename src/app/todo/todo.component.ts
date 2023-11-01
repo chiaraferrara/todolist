@@ -5,10 +5,12 @@ import { TodoService } from '../shared/todo.service';
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+  styleUrls: ['./todo.component.css'],
+  
 })
 export class TodoComponent implements OnInit {
 
+  itemIndexInAnimation: number = -1;
   todos : any[] = [];
   constructor(private todoService: TodoService){
     
@@ -40,14 +42,23 @@ export class TodoComponent implements OnInit {
 }
 
 // qui possiamo utilizzare l'id
-onStatusChange(id:string, newStatus:boolean){
-  this.todoService.updateToDoStatus(id,newStatus)
+onStatusChange(id: string, newStatus: boolean) {
+  this.todoService.updateToDoStatus(id, newStatus);
 
+  const todo = this.todos.find(todo => todo.id === id);
+  if (todo) {
+      todo.completed = newStatus;
+  }
 }
 
 deleteToDoItem(id:string){
   this.todoService.deleteToDo(id)
 
 }
+
+checkCompletion(index: number) {
+  this.todos[index].completed = !this.todos[index].completed;
+}
+
 
 }

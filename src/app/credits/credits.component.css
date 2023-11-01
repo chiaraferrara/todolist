@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Port+Lligat+Slab&display=swap');
 a, a:visited{
     color: black;
     text-decoration: none;
     font-variant: small-caps;
     font-weight: bolder;
+}
+
+.card-body{
+    margin: auto;
+    font-family: 'Dongle', sans-serif;
+font-family: 'Port Lligat Slab', serif;
+line-height: 1.4;
 }

@@ -1,4 +1,4 @@
-<div class="fixed-top"><button class="btn active" 
+<div class="fixed-top"><button class="btn" 
     (click)="toggleSidebar()" 
     [ngClass]="{'on-sidebar': isSidebarOpen}">
     <img src="https://github.com/chiaraferrara/StudioGhibli/blob/3f4858a29cce95959742a40d7f1aca38e6b3d304/src/app/img/menu.png?raw=true" style="height: 20px"></button>
@@ -6,17 +6,15 @@
 
     <div class="card"
     *ngIf="isSidebarOpen"
-    style="width: 150px;">
-        <div class="card-header">
-          Credits
-        </div>
+    style="width: 350px;">
         <div class="card-body"
         style="text-align: center;"
         >
-        I wanted to learn how to use Firebase so I made this project using Angular, Bootstrap and Firebase.<br>
-        Work in progress.
+        <h2>To do List (Work in Progress)</h2>
+        Il progetto "To do list" è un'applicazione web di gestione delle attività costruita con Angular e Firebase Firestore. Questa applicazione ti consente di creare, aggiornare e eliminare facilmente le tue attività quotidiane, offrendoti un modo efficiente per organizzare il tuo lavoro e la tua vita.<br>
         <a href="https://github.com/chiaraferrara"><img src="https://github.com/chiaraferrara/StudioGhibli/blob/56946933e0f028998ef3a97e6adc07c49962933c/src/app/img/github.png?raw=true" style= "width: 40px;"></a>
         <a href="https://angular.io/"><img src="https://github.com/chiaraferrara/StudioGhibli/blob/9140d4e3e77cdd0f757b9ede021bbbd650e7eada/src/app/img/angular_solidBlack.png?raw=true" style="width: 50px;"></a>
+        <a href="https://www.linkedin.com/in/chiara-ferrara-41273a265/"><img src="https://cdn.icon-icons.com/icons2/2428/PNG/512/linkedin_black_logo_icon_147114.png" style="width: 50px;"></a>
         </div>
       </div>
     </div>
